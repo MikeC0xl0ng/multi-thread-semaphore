@@ -15,4 +15,8 @@ class SharedMemory {
     boolean tryAccess(){
         return semaphore.tryAcquire();
     }
+    
+    void release() {
+        semaphore.release();
+    }
 }
