@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package multithreadsemaphore;
 
 /**
@@ -9,12 +5,14 @@ package multithreadsemaphore;
  * @author nick
  */
 public class MultiThreadSemaphore {
+    
+    static final int NUMBER_SHARED_RESOURCES = 10;
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        SharedMemory [] sharedMemory = new SharedMemory[NUMBER_SHARED_RESOURCES];
+        for(int i=0; i<sharedMemory.length; i++){
+            sharedMemory[i] = new SharedMemory();
+        }      
     }
     
 }
