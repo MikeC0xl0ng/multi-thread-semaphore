@@ -17,6 +17,16 @@ class SharedMemory {
     }
     
     void release() {
-        semaphore.release();
+        try {
+            semaphore.release();
+        } catch (Exception e) {}
+        
     }
-}
+    
+    void acquire(){
+        try{
+            semaphore.acquire();
+        }catch(Exception ex){}
+    }
+    
+ }
